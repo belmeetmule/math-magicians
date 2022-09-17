@@ -8,13 +8,9 @@ const Calculator = () => {
     operation: null,
   });
 
-  const updateState = (dataobj) => {
-    setCalculatorData(dataobj);
-  };
-
   const Compute = (obj, button) => {
     const newObj = calculate(obj, button);
-    updateState(newObj);
+    setCalculatorData(newObj);
   };
 
   const updateScreen = () => {
