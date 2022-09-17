@@ -25,7 +25,7 @@ class App extends React.Component {
     const { calculatorData } = this.state;
     return (
       <div className="App">
-        <Calculator updateState={this.updateState} calculatorData={calculatorData} />
+        <Calculator calculatorData={calculatorData} updateState={this.updateState} />
       </div>
     );
   }
