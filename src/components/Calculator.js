@@ -220,7 +220,7 @@ class Calculator extends React.Component {
 
 Calculator.propTypes = {
   updateState: PropTypes.func.isRequired,
-  /* eslint-disable-next-line react/forbid-prop-types*/
+  /* eslint-disable-next-line react/forbid-prop-types */
   calculatorData: PropTypes.object.isRequired,
 };
 
