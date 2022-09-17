@@ -16,9 +16,9 @@ class Calculator extends React.Component {
   };
 
   updateScreen = () => {
-    const { digitObj } = this.props;
+    const { calculatorData } = this.props;
 
-    const { total, next, operation } = digitObj;
+    const { total, next, operation } = calculatorData;
 
     if (total === null && next === null) {
       return 0;
@@ -36,7 +36,7 @@ class Calculator extends React.Component {
   };
 
   render() {
-    const { digitObj } = this.props;
+    const { calculatorData } = this.props;
     return (
       <div className="container">
         <div className="keys screen">
@@ -46,7 +46,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, 'AC');
+            this.Compute(calculatorData, 'AC');
           }}
         >
           AC
@@ -55,7 +55,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '+/-');
+            this.Compute(calculatorData, '+/-');
           }}
         >
           +/-
@@ -64,7 +64,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '%');
+            this.Compute(calculatorData, '%');
           }}
         >
           %
@@ -73,7 +73,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys operators"
           onClick={() => {
-            this.Compute(digitObj, '÷');
+            this.Compute(calculatorData, '÷');
           }}
         >
           ÷
@@ -81,9 +81,8 @@ class Calculator extends React.Component {
         <button
           type="button"
           className="keys "
-          value="7"
           onClick={() => {
-            this.Compute(digitObj, '7');
+            this.Compute(calculatorData, '7');
           }}
         >
           7
@@ -91,9 +90,8 @@ class Calculator extends React.Component {
         <button
           type="button"
           className="keys"
-          value="8"
           onClick={() => {
-            this.Compute(digitObj, '8');
+            this.Compute(calculatorData, '8');
           }}
         >
           8
@@ -102,7 +100,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '9');
+            this.Compute(calculatorData, '9');
           }}
         >
           9
@@ -111,7 +109,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys operators"
           onClick={() => {
-            this.Compute(digitObj, 'x');
+            this.Compute(calculatorData, 'x');
           }}
         >
           x
@@ -120,7 +118,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '4');
+            this.Compute(calculatorData, '4');
           }}
         >
           4
@@ -129,7 +127,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '5');
+            this.Compute(calculatorData, '5');
           }}
         >
           5
@@ -138,7 +136,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '6');
+            this.Compute(calculatorData, '6');
           }}
         >
           6
@@ -147,7 +145,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys operators"
           onClick={() => {
-            this.Compute(digitObj, '-');
+            this.Compute(calculatorData, '-');
           }}
         >
           -
@@ -156,7 +154,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '1');
+            this.Compute(calculatorData, '1');
           }}
         >
           1
@@ -165,7 +163,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '2');
+            this.Compute(calculatorData, '2');
           }}
         >
           2
@@ -174,7 +172,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '3');
+            this.Compute(calculatorData, '3');
           }}
         >
           3
@@ -183,7 +181,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys operators"
           onClick={() => {
-            this.Compute(digitObj, '+');
+            this.Compute(calculatorData, '+');
           }}
         >
           +
@@ -192,7 +190,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys zero"
           onClick={() => {
-            this.Compute(digitObj, '0');
+            this.Compute(calculatorData, '0');
           }}
         >
           0
@@ -201,7 +199,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys"
           onClick={() => {
-            this.Compute(digitObj, '.');
+            this.Compute(calculatorData, '.');
           }}
         >
           .
@@ -210,7 +208,7 @@ class Calculator extends React.Component {
           type="button"
           className="keys operators"
           onClick={() => {
-            this.Compute(digitObj, '=');
+            this.Compute(calculatorData, '=');
           }}
         >
           =
@@ -222,8 +220,8 @@ class Calculator extends React.Component {
 
 Calculator.propTypes = {
   updateState: PropTypes.func.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  digitObj: PropTypes.object.isRequired,
+  /* eslint-disable-next-line react/forbid-prop-types*/
+  calculatorData: PropTypes.object.isRequired,
 };
 
 export default Calculator;
