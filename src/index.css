@@ -14,9 +14,6 @@
 body {
   height: 100vh;
   background-color: var(--primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .container {
@@ -55,4 +52,37 @@ button:hover {
 
 .operators {
   background-color: var(--secondary);
+}
+
+.navBar ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+a.active-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #d9d9d9;
+}
+
+a.active-link:hover {
+  color: #ff8c00;
+}
+
+/* a.active-link.active{
+  color: #ff8c00;
+} */
+
+.calcWrapper {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 3rem;
+}
+
+blockquote {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 2rem;
 }
